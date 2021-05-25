@@ -66,6 +66,20 @@ function jogo(aX, oX, block, ind, ind1) {
             alert('O jogador 2 venceu :D');
             window.location.href = window.location.href;
         }
+
+        // Diagonais
+        if ((bloick[1] == 'a1' && bloick[5] == 'a5' && bloick[9] == 'a9') || (bloick[3] == 'a3' && bloick[5] == 'a5' && bloick[7] == 'a7'))
+        {
+            alert('O jogador 1 venceu :D');
+            window.location.href = window.location.href;
+            
+        }
+        else if ((bloick[1] == 'o1' && bloick[5] == 'o5' && bloick[9] == 'o9') || (bloick[3] == 'o3' && bloick[5] == 'o5' && bloick[7] == 'o7'))
+        {
+            alert('O jogador 1 venceu :D');
+            window.location.href = window.location.href; 
+        }
+
         else{
             if (click >= 8){   
                 document.getElementById('h3').style.visibility = "visible"; 
