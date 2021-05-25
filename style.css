@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+
+}
+
+#containerprincipal {
+    background-color: aquamarine;
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#containerjogo {
+    background-color: rgb(50, 190, 144);
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.bloco {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    margin: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.containerjogo {
+    display: flex;
+}
+
+.bloco img {
+    width: 145px;
+    visibility: hidden;
+    position: absolute;
+}
+
