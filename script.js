@@ -76,7 +76,7 @@ function jogo(aX, oX, block, ind, ind1) {
         }
         else if ((bloick[1] == 'o1' && bloick[5] == 'o5' && bloick[9] == 'o9') || (bloick[3] == 'o3' && bloick[5] == 'o5' && bloick[7] == 'o7'))
         {
-            alert('O jogador 1 venceu :D');
+            alert('O jogador 2 venceu :D');
             window.location.href = window.location.href; 
         }
 
