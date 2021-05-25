@@ -47,3 +47,22 @@ body {
     position: absolute;
 }
 
+#containerprincipal button {
+    position: absolute;
+    bottom: 500px;
+    right: 80px;
+}
+
+#reiniciar {
+    visibility: hidden;
+
+
+}
+
+#containerprincipal h3{
+    position: absolute;
+    bottom: 510px;
+    right: 30px;
+    visibility: hidden;
+}
+

@@ -3,7 +3,7 @@ let jogada = 1;
 //let x = document.getElementById('a1');
 //let x2 = document.getElementById('a2');
 let bloick = [];
-
+let click = 0;
 
 
 function jogo(aX, oX, block, ind, ind1) {
@@ -13,12 +13,14 @@ function jogo(aX, oX, block, ind, ind1) {
         document.getElementById(block).style.pointerEvents = "none";
         bloick[ind] = aX;
         jogada++;
+        click++;
     }
     else{
         document.getElementById(aX).style.visibility = "hidden";
         document.getElementById(oX).style.visibility = "visible";
         document.getElementById(block).style.pointerEvents = "none";
         bloick[ind] = oX;
+        click++;
         jogada--;
     }
     setTimeout(function(){
@@ -64,8 +66,18 @@ function jogo(aX, oX, block, ind, ind1) {
             alert('O jogador 2 venceu :D');
             window.location.href = window.location.href;
         }
+        else{
+            if (click >= 8){   
+                document.getElementById('h3').style.visibility = "visible"; 
+                document.getElementById('reiniciar').style.visibility = "visible"; 
+            }
+        }
         
     }, 1);
+}
+
+function reiniciar() {
+    window.location.href = window.location.href;
 }
 
 
