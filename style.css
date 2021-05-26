@@ -28,7 +28,7 @@ body {
 
 }
 
-.bloco {
+.bloco{
     width: 150px;
     height: 150px;
     border: 2px solid black;
@@ -41,28 +41,57 @@ body {
     display: flex;
 }
 
+
 .bloco img {
     width: 145px;
     visibility: hidden;
     position: absolute;
 }
 
-#containerprincipal button {
+#containerprincipal button:nth-child(4) {
     position: absolute;
-    bottom: 500px;
+    bottom: 185px;
     right: 80px;
+}
+
+
+#containerprincipal h3:nth-child(3){
+    position: absolute;
+    bottom: 200px;
+    right: 30px;
+    visibility: hidden;
+}
+
+#h3inicio {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    text-shadow: 1px 1px 3px grey;
 }
 
 #reiniciar {
     visibility: hidden;
-
-
 }
 
-#containerprincipal h3{
+#tabelajogadores {
     position: absolute;
-    bottom: 510px;
-    right: 30px;
+    top: 150px;
+    right: 70px;
+    text-align: center;
+}
+
+#tabelajogadores p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: red;
+    text-shadow: 1px 1px 3px black;
+    border: 1px solid black;
     visibility: hidden;
+}
+
+#iniciar {
+    position: absolute;
+    top: 80px;
+    right: 90px;
 }
 

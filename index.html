@@ -8,8 +8,15 @@
     </head>
     <body>
         <div id="containerprincipal">
+            <h3 id="h3inicio"> # JOGO DA VELHA # </h3>
+            <button id="iniciar" onclick="iniciar()">INICIAR</button>
             <h3 id="h3"> Velha? Reinicie o jogo.</h3>
             <button id="reiniciar" onclick="reiniciar()">REINICIAR</button>
+            <div id="tabelajogadores">
+                <h2>Jogadores:</h2>
+                <p id="p1"></p>
+                <p id="p2"></p>
+            </div>
             <div class="containerjogo">
                 <div onclick="jogo('a1', 'o1', 'block1', '1', '1')" id="block1" class="bloco">
                     <img id="a1" src="images/Xpng.png">
