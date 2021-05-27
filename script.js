@@ -6,8 +6,8 @@ let jogador1 = 0;
 let jogador2 = 0;
 let nome;
 let nome2;
-let jogou = 1;
-let jogou2 = 1;
+let jogou = 0;
+let jogou2 = 0;
 let vit = 0;
 let vit2 = 0;
 
@@ -19,6 +19,7 @@ function iniciar(){
         document.getElementById('p2').innerHTML = nome2;
         document.getElementById('p1').style.visibility = "visible";
         document.getElementById('p2').style.visibility = "visible";
+        document.getElementById('reiniciar').style.visibility = "visible"; 
         alert('JOGO INICIADO! ' + nome + ' é o jogador X e ' + nome2 +' jogador O');
         let bloco = document.querySelectorAll('.bloco');
         for (let i = 0; i < 9; i++)
@@ -33,21 +34,19 @@ function jogo(aX, oX, block, ind, ind1) {
         document.getElementById(aX).style.visibility = "visible";
         document.getElementById(oX).style.visibility = "hidden";
         document.getElementById(block).style.pointerEvents = "none";
+        jogou += 1;
         document.getElementById('jog').innerHTML = "Jogadas: " + jogou;
         bloick[ind] = aX;
         jogada++;
-        click++;
-        jogou++;
     }
     else{
         document.getElementById(aX).style.visibility = "hidden";
         document.getElementById(oX).style.visibility = "visible";
         document.getElementById(block).style.pointerEvents = "none";
+        jogou2 += 1;
         document.getElementById('jog2').innerHTML = "Jogadas: " + jogou2;
         bloick[ind] = oX;
         jogada--;
-        click++;
-        jogou2++;
     }
     setTimeout(function(){
         //CONDIÇÕES PARA: X;
@@ -125,9 +124,8 @@ function jogo(aX, oX, block, ind, ind1) {
         }
 
         else{
-            if (click >= 8){   
+            if ((jogou + jogou2) == 7){   
                 document.getElementById('h3').style.visibility = "visible"; 
-                document.getElementById('reiniciar').style.visibility = "visible"; 
             }
         }
         
