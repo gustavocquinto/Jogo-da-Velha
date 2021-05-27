@@ -1,40 +1,53 @@
 
 let jogada = 1;
-//let x = document.getElementById('a1');
-//let x2 = document.getElementById('a2');
 let bloick = [];
 let click = 0;
 let jogador1 = 0;
 let jogador2 = 0;
 let nome;
 let nome2;
+let jogou = 1;
+let jogou2 = 1;
+let vit = 0;
+let vit2 = 0;
+
 function iniciar(){
         nome = prompt('Qual nome do primeiro jogador?');
         nome2 = prompt('Qual nome do segundo jogador?');
+        document.getElementById('tabelajogadores').style.display = "block";
         document.getElementById('p1').innerHTML = nome;
         document.getElementById('p2').innerHTML = nome2;
         document.getElementById('p1').style.visibility = "visible";
         document.getElementById('p2').style.visibility = "visible";
         alert('JOGO INICIADO! ' + nome + ' é o jogador X e ' + nome2 +' jogador O');
-        
+        let bloco = document.querySelectorAll('.bloco');
+        for (let i = 0; i < 9; i++)
+        {
+            bloco[i].style.pointerEvents = "auto";
+        }    
     }
 
 function jogo(aX, oX, block, ind, ind1) {
+
     if (jogada == 1){
         document.getElementById(aX).style.visibility = "visible";
         document.getElementById(oX).style.visibility = "hidden";
         document.getElementById(block).style.pointerEvents = "none";
+        document.getElementById('jog').innerHTML = "Jogadas: " + jogou;
         bloick[ind] = aX;
         jogada++;
         click++;
+        jogou++;
     }
     else{
         document.getElementById(aX).style.visibility = "hidden";
         document.getElementById(oX).style.visibility = "visible";
         document.getElementById(block).style.pointerEvents = "none";
+        document.getElementById('jog2').innerHTML = "Jogadas: " + jogou2;
         bloick[ind] = oX;
         jogada--;
         click++;
+        jogou2++;
     }
     setTimeout(function(){
         //CONDIÇÕES PARA: X;
@@ -45,6 +58,7 @@ function jogo(aX, oX, block, ind, ind1) {
             alert('Jogador(a) ' + nome + ' venceu :D');
             window.location.href = window.location.href;
             jogador1++;
+            vit++;
             
         }
         // Linha 2 inteira OU Coluna 2 inteira
@@ -52,6 +66,7 @@ function jogo(aX, oX, block, ind, ind1) {
             alert('Jogador(a) ' + nome + ' venceu :D');
             window.location.href = window.location.href;
             jogador1++;
+            vit++;
         }
 
         // Linha 3 inteira OU Coluna 3 inteira
@@ -59,6 +74,7 @@ function jogo(aX, oX, block, ind, ind1) {
             alert('Jogador(a) ' + nome + ' venceu :D');
             window.location.href = window.location.href;
             jogador1++;
+            vit++;
         }
 
         ///////////////////////////
@@ -70,6 +86,7 @@ function jogo(aX, oX, block, ind, ind1) {
             alert('Jogador(a) ' + nome2 + ' venceu :D');
             window.location.href = window.location.href;
             jogador2++;
+            vit2++;
             
         }
         // Linha 2 inteira OU Coluna 2 inteira
@@ -77,6 +94,7 @@ function jogo(aX, oX, block, ind, ind1) {
             alert('Jogador(a) ' + nome2 + ' venceu :D');
             window.location.href = window.location.href;
             jogador2++;
+            vit2++;
         }
 
         // Linha 3 inteira OU Coluna 3 inteira
@@ -84,6 +102,7 @@ function jogo(aX, oX, block, ind, ind1) {
             alert('Jogador(a) ' + nome2 + ' venceu :D');
             window.location.href = window.location.href;
             jogador2++;
+            vit2++;
         }
 
         // Diagonais
@@ -93,6 +112,7 @@ function jogo(aX, oX, block, ind, ind1) {
             alert('Jogador(a) ' + nome + ' venceu :D');
             window.location.href = window.location.href;
             jogador1++;
+            vit++;
             
         }
             // O:
@@ -101,6 +121,7 @@ function jogo(aX, oX, block, ind, ind1) {
             alert('Jogador(a) ' + nome2 + ' venceu :D');
             window.location.href = window.location.href;
             jogador2++; 
+            vit2++;
         }
 
         else{

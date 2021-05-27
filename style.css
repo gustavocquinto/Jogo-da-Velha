@@ -1,10 +1,13 @@
 * {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 2px 2px 5px black;
+    
 }
 
 body {
     margin: 0px;
-
+    background-image: url('https://wallpaperaccess.com/full/2413558.jpg');
 }
 
 #containerprincipal {
@@ -15,6 +18,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: -3px 3px 5px black;
+    background-image: url('https://www.desktopbackground.org/p/2011/03/07/168447_minimalistic-pattern-patterns-backgrounds-carbon-fiber-backgrounds_1920x1200_h.jpg');
 }
 
 #containerjogo {
@@ -35,6 +40,8 @@ body {
     margin: 20px;
     cursor: pointer;
     user-select: none;
+    pointer-events: none;
+    box-shadow: -3px 3px 5px black;
 }
 
 .containerjogo {
@@ -50,23 +57,29 @@ body {
 
 #containerprincipal button:nth-child(4) {
     position: absolute;
-    bottom: 185px;
+    bottom: 90px;
     right: 80px;
+    width: 95px;
+    font-size: 15px;
+    border-radius: 20px;
+    text-shadow: 2px 2px 3px grey;
 }
 
 
 #containerprincipal h3:nth-child(3){
     position: absolute;
-    bottom: 200px;
+    bottom: 110px;
     right: 30px;
     visibility: hidden;
+    color: white;
 }
 
 #h3inicio {
     position: absolute;
+    color: white;
     top: 20px;
     right: 30px;
-    text-shadow: 1px 1px 3px grey;
+    text-shadow: 2px 2px 5px black;
 }
 
 #reiniciar {
@@ -78,20 +91,46 @@ body {
     top: 150px;
     right: 70px;
     text-align: center;
+    color: white;
+    display: none;
 }
+
+
+
 
 #tabelajogadores p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-    color: red;
+    color: white;
     text-shadow: 1px 1px 3px black;
     border: 1px solid black;
-    visibility: hidden;
+    box-shadow: 2px 2px 5px black;;
+    visibility: visible;
+    font-size: 20px;
+    padding: 5px;
 }
+
+#tabelajogadores #jog {
+    font-size: 12px;
+
+}
+#tabelajogadores #jog2 {
+    font-size: 12px;
+
+}
+
+
+
 
 #iniciar {
     position: absolute;
     top: 80px;
     right: 90px;
+    font-size: 15px;
+    border-radius: 20px;
+    text-shadow: 2px 2px 3px grey;
+    box-shadow: 2px 2px 5px black;;
+    padding: 10px;
+    cursor:pointer;
 }
 
