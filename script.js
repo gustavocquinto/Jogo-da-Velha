@@ -12,6 +12,11 @@ let vit = 0;
 let vit2 = 0;
 
 function iniciar(){
+        reiniciar()
+        document.getElementById('vit').innerHTML = "Vitórias: "
+        vit = 0;
+        document.getElementById('vit2').innerHTML = "Vitórias: "
+        vit2 = 0;
         nome = prompt('Qual nome do primeiro jogador?');
         nome2 = prompt('Qual nome do segundo jogador?');
         document.getElementById('tabelajogadores').style.display = "block";
@@ -54,26 +59,26 @@ function jogo(aX, oX, block, ind, ind1) {
         //linha 1 inteira OU coluna 1 inteira
         if ((bloick[1] == 'a1' && bloick[2] == 'a2' && bloick[3] == 'a3') || (bloick[1] == 'a1' && bloick[4] == 'a4' && bloick[7] == 'a7'))
         {
-            alert('Jogador(a) ' + nome + ' venceu :D');
-            window.location.href = window.location.href;
-            jogador1++;
             vit++;
+            alert('Jogador(a) ' + nome + ' venceu :D');
+            reiniciar(1);
+            jogador1++;
             
         }
         // Linha 2 inteira OU Coluna 2 inteira
         else if ((bloick[4] == 'a4' && bloick[5] == 'a5' && bloick[6] == 'a6') || (bloick[2] == 'a2' && bloick[5] == 'a5' && bloick[8] == 'a8')){
-            alert('Jogador(a) ' + nome + ' venceu :D');
-            window.location.href = window.location.href;
-            jogador1++;
             vit++;
+            alert('Jogador(a) ' + nome + ' venceu :D');
+            reiniciar(1);
+            jogador1++;
         }
 
         // Linha 3 inteira OU Coluna 3 inteira
         else if ((bloick[7] == 'a7' && bloick[8] == 'a8' && bloick[9] == 'a9') || (bloick[3] == 'a3' && bloick[6] == 'a6' && bloick[9] == 'a9')){
-            alert('Jogador(a) ' + nome + ' venceu :D');
-            window.location.href = window.location.href;
-            jogador1++;
             vit++;
+            alert('Jogador(a) ' + nome + ' venceu :D');
+            reiniciar(1);
+            jogador1++;
         }
 
         ///////////////////////////
@@ -82,45 +87,45 @@ function jogo(aX, oX, block, ind, ind1) {
         //linha 1 inteira OU coluna 1 inteira
         if ((bloick[1] == 'o1' && bloick[2] == 'o2' && bloick[3] == 'o3') || (bloick[1] == 'o1' && bloick[4] == 'o4' && bloick[7] == 'o7'))
         {
-            alert('Jogador(a) ' + nome2 + ' venceu :D');
-            window.location.href = window.location.href;
-            jogador2++;
             vit2++;
+            alert('Jogador(a) ' + nome2 + ' venceu :D');
+            reiniciar(2);
+            jogador2++;
             
         }
         // Linha 2 inteira OU Coluna 2 inteira
         else if ((bloick[4] == 'o4' && bloick[5] == 'o5' && bloick[6] == 'o6') || (bloick[2] == 'o2' && bloick[5] == 'o5' && bloick[8] == 'o8')){
-            alert('Jogador(a) ' + nome2 + ' venceu :D');
-            window.location.href = window.location.href;
-            jogador2++;
             vit2++;
+            alert('Jogador(a) ' + nome2 + ' venceu :D');
+            reiniciar(2);
+            jogador2++;
         }
 
         // Linha 3 inteira OU Coluna 3 inteira
         else if ((bloick[7] == 'o7' && bloick[8] == 'o8' && bloick[9] == 'o9') || (bloick[3] == 'o3' && bloick[6] == 'o6' && bloick[9] == 'o9')){
-            alert('Jogador(a) ' + nome2 + ' venceu :D');
-            window.location.href = window.location.href;
-            jogador2++;
             vit2++;
+            alert('Jogador(a) ' + nome2 + ' venceu :D');
+            reiniciar(2);
+            jogador2++;
         }
 
         // Diagonais
             // X:
         if ((bloick[1] == 'a1' && bloick[5] == 'a5' && bloick[9] == 'a9') || (bloick[3] == 'a3' && bloick[5] == 'a5' && bloick[7] == 'a7'))
         {
-            alert('Jogador(a) ' + nome + ' venceu :D');
-            window.location.href = window.location.href;
-            jogador1++;
             vit++;
+            alert('Jogador(a) ' + nome + ' venceu :D');
+            reiniciar(1);
+            jogador1++;
             
         }
             // O:
         else if ((bloick[1] == 'o1' && bloick[5] == 'o5' && bloick[9] == 'o9') || (bloick[3] == 'o3' && bloick[5] == 'o5' && bloick[7] == 'o7'))
         {
-            alert('Jogador(a) ' + nome2 + ' venceu :D');
-            window.location.href = window.location.href;
-            jogador2++; 
             vit2++;
+            alert('Jogador(a) ' + nome2 + ' venceu :D');
+            reiniciar(2);
+            jogador2++;
         }
 
         else{
@@ -132,8 +137,37 @@ function jogo(aX, oX, block, ind, ind1) {
     }, 1);
 }
 
-function reiniciar() {
-    window.location.href = window.location.href;
+function reiniciar(player) {
+    if (player == 1)
+    {
+        const vitoria1 = document.getElementById('vit');
+        vitoria1.innerHTML = "Vitórias: " + vit;
+    }
+    else if (player == 2)
+    {
+        const vitoria2 = document.getElementById('vit2');
+        vitoria2.innerHTML = "Vitórias: " + vit2;
+    }
+    const blocosimg = document.querySelectorAll('.img');
+    const pointerreset = document.querySelectorAll('.bloco');
+
+    for (let  i = 0; i < 18; i++)
+    {
+        blocosimg[i].style.visibility = "hidden";
+        bloick[i] = '';
+
+    }
+
+    for (let  i = 0; i < 9; i++)
+    {
+        pointerreset[i].style.pointerEvents = "auto"
+
+    }
+    jogou = 0;
+    jogou2 = 0;
+    jogada = 1;
+    document.getElementById('jog').innerHTML = "Jogadas: 0"
+    document.getElementById('jog2').innerHTML = "Jogadas: 0"
 }
 
 

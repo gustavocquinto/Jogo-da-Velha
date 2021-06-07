@@ -57,7 +57,7 @@ body {
 
 #containerprincipal button:nth-child(4) {
     position: absolute;
-    bottom: 90px;
+    bottom: 40px;
     right: 80px;
     width: 95px;
     font-size: 15px;
@@ -68,7 +68,7 @@ body {
 
 #containerprincipal h3:nth-child(3){
     position: absolute;
-    bottom: 110px;
+    bottom: 60px;
     right: 30px;
     visibility: hidden;
     color: white;
@@ -134,3 +134,36 @@ body {
     cursor:pointer;
 }
 
+
+#tabelajogadores #vit {
+    font-size: 12px;
+
+}
+
+#tabelajogadores #vit2 {
+    font-size: 12px;
+
+}
+
+#instruçoes {
+    background-color: aquamarine;
+    width: 300px;
+    height: 600px;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    color: white;
+    background-image: url('https://www.desktopbackground.org/p/2011/03/07/168447_minimalistic-pattern-patterns-backgrounds-carbon-fiber-backgrounds_1920x1200_h.jpg');
+}
+
+#instruçoes, h1 {
+    text-align: center;
+}
+
+.blocoinst p {
+    font-size: 14px;
+    padding: 5px;
+    background-color:#1f1e1e;
+
+
+}

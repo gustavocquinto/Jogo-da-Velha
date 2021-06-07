@@ -9,63 +9,78 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div id="instruçoes">
+            <h1>INSTRUÇÕES</h1>
+            <div class="blocoinst">
+                <h3> Como jogar? </h3>
+                <p> Para iniciar o jogo, basta clicar em INICIAR.</p>
+            </div>
+            <div class="blocoinst">
+                <h3> Como mudar os nomes? </h3>
+                <p> Para alterar os nomes, clique em INICIAR.</p>
+            </div>
+            <div class="blocoinst">
+                <h3> Como reiniciar o round? </h3>
+                <p> Para reiniciar o round ou tabuleiro, clique em REINICIAR.</p>
+            </div>
+        </div>
         <div id="containerprincipal">
             <h3 id="h3inicio"> # JOGO DA VELHA # </h3>
             <button id="iniciar" onclick="iniciar()">INICIAR</button>
-            <h3 id="h3"> Velha? Reinicie o jogo.</h3>
+            <h3 id="h3"> Velha? Reinicie o round. </h3>
             <button id="reiniciar" onclick="reiniciar()">REINICIAR</button>
             <div id="tabelajogadores">
                 <h2>Jogadores:</h2>
                 <p id="p1"></p>
                 <p id="jog"> Jogadas: </p>
-                <!-- <p id="vit"> Vitórias: </p> -->
+                <p id="vit"> Vitórias: </p>
                 <p id="p2"></p>
                 <p id="jog2"> Jogadas: </p>
-                <!-- <p id="vit2"> Vitórias: </p> -->
+                <p id="vit2"> Vitórias: </p>
             </div>
             <div class="containerjogo">
                 <div onclick="jogo('a1', 'o1', 'block1', '1', '1')" id="block1" class="bloco">
-                    <img id="a1" src="images/Xpng.png">
-                    <img id="o1" src="images/O2png.png">
+                    <img class="img" id="a1" src="images/Xpng.png">
+                    <img class="img" id="o1" src="images/O2png.png">
                 </div>
                 <div onclick="jogo('a2', 'o2', 'block2', '2', '1')" id="block2" class="bloco">
-                    <img id="a2" src="images/Xpng.png">
-                    <img id="o2" src="images/O2png.png">
+                    <img class="img" id="a2" src="images/Xpng.png">
+                    <img class="img" id="o2" src="images/O2png.png">
                 </div>
                     
                 <div onclick="jogo('a3', 'o3', 'block3', '3', '1')" id="block3" class="bloco">
-                    <img id="a3" src="images/Xpng.png">
-                    <img id="o3" src="images/O2png.png">
+                    <img class="img" id="a3" src="images/Xpng.png">
+                    <img class="img" id="o3" src="images/O2png.png">
                 </div>
             </div>
             <div class="containerjogo">
                 <div onclick="jogo('a4', 'o4', 'block4', '4', '1')" id="block4" class="bloco">
-                    <img id="a4" src="images/Xpng.png">
-                    <img id="o4" src="images/O2png.png">
+                    <img class="img" id="a4" src="images/Xpng.png">
+                    <img class="img" id="o4" src="images/O2png.png">
                 </div>
                 <div onclick="jogo('a5', 'o5', 'block5', '5')" id="block5" class="bloco">
-                    <img id="a5" src="images/Xpng.png">
-                    <img id="o5" src="images/O2png.png">
+                    <img class="img" id="a5" src="images/Xpng.png">
+                    <img class="img" id="o5" src="images/O2png.png">
                 </div>
                     
                 <div onclick="jogo('a6', 'o6', 'block6', '6')" id="block6" class="bloco">
-                    <img id="a6" src="images/Xpng.png">
-                    <img id="o6" src="images/O2png.png">
+                    <img class="img" id="a6" src="images/Xpng.png">
+                    <img class="img" id="o6" src="images/O2png.png">
                 </div>
             </div>
             <div class="containerjogo">
                 <div onclick="jogo('a7', 'o7', 'block7', '7')" id="block7" class="bloco">
-                    <img id="a7" src="images/Xpng.png">
-                    <img id="o7" src="images/O2png.png">
+                    <img class="img" id="a7" src="images/Xpng.png">
+                    <img class="img" id="o7" src="images/O2png.png">
                 </div>
                 <div onclick="jogo('a8', 'o8', 'block8', '8')" id="block8" class="bloco">
-                    <img id="a8" src="images/Xpng.png">
-                    <img id="o8" src="images/O2png.png">
+                    <img class="img" id="a8" src="images/Xpng.png">
+                    <img class="img" id="o8" src="images/O2png.png">
                 </div>
                     
                 <div onclick="jogo('a9', 'o9', 'block9', '9')" id="block9" class="bloco">
-                    <img id="a9" src="images/Xpng.png">
-                    <img id="o9" src="images/O2png.png">
+                    <img class="img" id="a9" src="images/Xpng.png">
+                    <img class="img" id="o9" src="images/O2png.png">
                 </div>
             </div>
             
