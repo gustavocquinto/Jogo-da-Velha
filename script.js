@@ -154,14 +154,16 @@ function reiniciar(player) {
     for (let  i = 0; i < 18; i++)
     {
         blocosimg[i].style.visibility = "hidden";
-        bloick[i] = '';
+    }
 
+    for (let  i = 0; i < 10; i++)
+    {
+        bloick[i] = '';
     }
 
     for (let  i = 0; i < 9; i++)
     {
-        pointerreset[i].style.pointerEvents = "auto"
-
+        pointerreset[i].style.pointerEvents = "auto";
     }
     jogou = 0;
     jogou2 = 0;
